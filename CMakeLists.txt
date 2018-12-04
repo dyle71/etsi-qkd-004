@@ -27,7 +27,7 @@ if (CMAKE_BUILD_TYPE STREQUAL "")
 endif (CMAKE_BUILD_TYPE STREQUAL "")
 message(STATUS "CMake build type: ${CMAKE_BUILD_TYPE}")
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 if (CMAKE_COMPILER_IS_GNUCC)
     set(GCC_WARNINGS "-Wall -Wextra -pedantic -pedantic-errors")
     if (NOT (CMAKE_BUILD_TYPE STREQUAL "Debug"))
