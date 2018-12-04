@@ -98,6 +98,30 @@ void qkd_get_key(uuid_t const & key_stream_id,
 void qkd_close(uuid_t const & key_stream_id, status_t & status);
 
 
+// ------------------------------------------------------------
+// non ETSI QKD 004 standard calls for this library
+
+
+/**
+ * Initialization codes.
+ */
+enum class init_code {
+    success = 0,            /**< all ok: LKMS is up and running. */
+    no_lkms                 /**< failed to contact LKMS. */
+};
+
+
+/**
+ * Initializes this QKD LKMS.
+ *
+ * @param   source      (inout) the source this LKMS will listen and connect to other lkms
+ * @param   north       (inout) northbound socket uri for communication from user side apps.
+ * @param   source      (inout) southbound socker uri for communication from qkd devices.
+ * @param   error       (out) init success/error code.
+ */
+void qkd_init(uri & source, uri & north, uri & south, init_code & error);
+
+
 }
 }
 }

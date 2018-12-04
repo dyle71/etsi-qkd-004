@@ -6,5 +6,31 @@
 
 #include <qkd-lkms/qkd-lkms.hpp>
 
-using namespace qkd::etsi;
 
+void qkd::etsi::appint::qkd_open(uri const & source,
+        uri const & destination,
+        qos_t const & qos,
+        uuid_t & key_stream_id,
+        status_t & status) {
+    
+    status = static_cast<status_t>(status_codes::success);
+}
+
+
+void qkd::etsi::appint::qkd_get_key(uuid_t const & key_stream_id,
+        std::uint32_t & index,
+        std::vector<std::byte> & buffer,
+        status_t & status) {
+    
+    status = static_cast<status_t>(status_codes::success);
+}
+
+
+void qkd::etsi::appint::qkd_close(uuid_t const & key_stream_id, status_t & status) {
+    
+    status = static_cast<status_t>(status_codes::success);
+}
+
+
+void qkd::etsi::appint::qkd_init(uri & source, uri & north, uri & south, init_code & error) {
+}

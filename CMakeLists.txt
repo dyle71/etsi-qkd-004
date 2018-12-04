@@ -65,7 +65,7 @@ else (Boost_FOUND)
     message(FATAL_ERROR "Boost >= 1.65.0 library not found.")
 endif (Boost_FOUND)
 
-# TODO: is there any FindUUID cmake available?
+# TODO: is there any FindUUID cmake officialy available?
 check_include_file(uuid/uuid.h HAVE_UUID_UUID_H)
 check_library_exists(uuid uuid_generate "/usr/local/lib;/usr/lib;/lib" HAVE_UUID_LIB)
 if (HAVE_UUID_LIB)
@@ -73,6 +73,15 @@ if (HAVE_UUID_LIB)
 else (HAVE_UUID_LIB)
     message(FATAL_ERROR "Could not find uuid implementation.")
 endif (HAVE_UUID_LIB)
+
+# TODO: is there any FindUV cmake officialy available?
+check_include_file(uv.h HAVE_UV_H)
+check_library_exists(uv uv_version "/usr/local/lib;/usr/lib;/lib" HAVE_UV_LIB)
+if (HAVE_UV_LIB)
+    set(CMAKE_REQUIRED_LIBRARIES "uv;${CMAKE_REQUIRED_LIBRARIES}")
+else (HAVE_UV_LIB)
+    message(FATAL_ERROR "Could not find uv implementation.")
+endif (HAVE_UV_LIB)
 
 find_package(GTest REQUIRED)
 

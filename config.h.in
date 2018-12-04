@@ -26,7 +26,8 @@
 #cmakedefine HAVE_LIMITS_H 1
 
 #cmakedefine HAVE_BOOST_LIB 1
-#cmakedefine HAVE_QT5_PKG 1
+#cmakedefine HAVE_UUID_LIB 1
+#cmakedefine HAVE_UV_LIB 1
 
 #endif
 
