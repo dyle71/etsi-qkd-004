@@ -65,7 +65,17 @@ else (Boost_FOUND)
     message(FATAL_ERROR "Boost >= 1.65.0 library not found.")
 endif (Boost_FOUND)
 
+# TODO: is there any FindUUID cmake available?
+check_include_file(uuid/uuid.h HAVE_UUID_UUID_H)
+check_library_exists(uuid uuid_generate "/usr/local/lib;/usr/lib;/lib" HAVE_UUID_LIB)
+if (HAVE_UUID_LIB)
+    set(CMAKE_REQUIRED_LIBRARIES "uuid;${CMAKE_REQUIRED_LIBRARIES}")
+else (HAVE_UUID_LIB)
+    message(FATAL_ERROR "Could not find uuid implementation.")
+endif (HAVE_UUID_LIB)
+
 find_package(GTest REQUIRED)
+
 
 # ------------------------------------------------------------
 
