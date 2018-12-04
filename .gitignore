@@ -1,0 +1,12 @@
+# vi swap files
+.*.swp
+
+# IDEs
+.idea/
+
+# build folder
+build/
+
+# temporary files and folders
+tmp/
+

@@ -1,0 +1,32 @@
+/*
+ * This file is part of etsi-qkd-004.
+ * See the LICENSE file for the software license.
+ * (C) Copyright 2018, Oliver Maurhart, dyle71@gmail.com
+ */
+
+#ifndef CONFIG_H
+#define CONFIG_H
+
+
+#cmakedefine HAVE_STDIO_H 1
+#cmakedefine HAVE_STDDEF_H 1
+#cmakedefine HAVE_STDLIB_H 1
+#cmakedefine HAVE_INTTYPES_H 1
+#cmakedefine HAVE_MEMORY_H 1
+#cmakedefine HAVE_STRING_H 1
+#cmakedefine HAVE_UNISTD_H 1
+#cmakedefine HAVE_STDBOOL_H 1
+#cmakedefine HAVE_ENDIAN_H 1
+#cmakedefine HAVE_SYS_TIME_H 1
+#cmakedefine HAVE_SYS_TIMES_H 1
+#cmakedefine HAVE_TIME_H 1
+#cmakedefine HAVE_MATH_H 1
+#cmakedefine HAVE_ASSERT_H 1
+#cmakedefine HAVE_ERRNO_H 1
+#cmakedefine HAVE_LIMITS_H 1
+
+#cmakedefine HAVE_BOOST_LIB 1
+#cmakedefine HAVE_QT5_PKG 1
+
+#endif
+
