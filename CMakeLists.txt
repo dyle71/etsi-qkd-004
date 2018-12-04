@@ -2,7 +2,7 @@
 # See the LICENSE file for the software license.
 # (C) Copyright 2018, Oliver Maurhart, dyle71@gmail.com
 
-project(etsi-qkd-04 C CXX)
+project(etsi-qkd-004 C CXX)
 cmake_minimum_required(VERSION 3.9.1)
 
 cmake_policy(SET CMP0057 NEW)
